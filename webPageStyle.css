@@ -1,0 +1,27 @@
+header {
+	text-align: center;
+}
+
+body {
+	background-color: rgb(204, 218, 230);
+	background-repeat: no-repeat;
+	background-size: 3000px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+hr {
+	background-color: #06345c;
+	height: 2;
+}
+
+a {
+	color: rgb(255, 255, 255);
+}
+
+form {
+	text-align: center;
+}
+
+li {
+	display: block;
+}

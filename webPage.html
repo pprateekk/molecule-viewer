@@ -1,0 +1,126 @@
+<html>
+
+<head>
+	<!-- add the script and stylesheet-->
+	<title> Molecule Viewer</title>
+	<link href="webPageStyle.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+	<script src="webPageScript.js"> </script>
+</head>
+
+<body>
+	<header>
+		<div style="position: relative;">
+			<img src="mol6.png" height="25%" width=100%">
+			<div style="position:absolute; top: 30%; left: 75%; color: white;">
+				<h1 id="homepage">MOLECULE VIEWER</h1>
+			</div>
+		</div>
+	</header>
+	<br>
+	<nav>
+		<hr>
+		<table width=100% height=30 style="background-color: #06345c;">
+			<tr>
+				<td width=50% height=25>
+					<p align="center" style="color: white;">
+						<a href="#homepage"> Home</a> |
+						<a href="#addremove"> Add or Remove Elements</a> |
+						<a href="#uploadsdf"> Upload an sdf file</a> |
+						<a href="#displaymol"> Display a Molecule</a>
+				</td>
+			</tr>
+		</table>
+		<hr>
+	</nav>
+	<br>
+
+
+	<div style="width:100%; text-align: center; background-color: #06345c; color: white;">
+		<h2 id="addremove">Add or Remove Elements</h2>
+	</div>
+	<p>
+	<h4>Add an element to the system</h4>
+	<!-- remove '/' from tjhe end in index???????? -->
+	<table>
+		<tr>
+			<td><label id="label1">Enter the Element Number:</label></td>
+			<td><input type="number" id="elementnumber" /></td>
+		</tr>
+		<tr>
+			<td><label id="label2">Enter the Element Code:</label></td>
+			<td><input type="text" id="elementcode" /></td>
+		</tr>
+		<tr>
+			<td><label id="label3">Enter the Element Name:</label></td>
+			<td><input type="text" id="name" /></td>
+		</tr>
+		<tr>
+			<td><label id="label4">Enter the Colour 1:</label></td>
+			<td><input type="color" id="colourone" /></td>
+		</tr>
+		<tr>
+			<td><label id="label5">Enter the Colour 2:</label></td>
+			<td><input type="color" id="colourtwo" /></td>
+		</tr>
+		<tr>
+			<td><label id="label6">Enter the Colour 3:</label></td>
+			<td><input type="color" id="colourthree" /></td>
+		</tr>
+		<tr>
+			<td><label id="label7">Enter the Radius of the Element:</label></td>
+			<td><input type="number" id="elementradius" /></td>
+		</tr>
+
+	</table>
+
+	<br>
+	<p>
+		<button id="buttonAdd"> Add Element </button>
+		<button id="buttonRemove"> Remove Element </button>
+	</p>
+
+
+	<!-- upload the sdf files here using a form-->
+	<div style="width:100%; text-align: center; background-color:  #06345c; color: white;">
+		<h2 id="uploadsdf">Upload an sdf file</h2>
+	</div>
+
+	<form id="formone" enctype="multipart/form-data">
+		<label id="molname">Enter the name of Molecule:</label>
+		<input type="text" id="namemol" />
+		<input type="file" name="filename" id="sdffile">
+		<input type="submit" value="Upload">
+	</form>
+
+
+	<div style="width:100%; text-align: center; background-color: #06345c; color: white;">
+		<h2 id="displaymol">Display a Molecule</h2>
+	</div>
+	<button id="listm">Click here to show list of molecules</button>
+
+	<ul id="displaylist">
+		<li></li>
+	</ul>
+
+	<select id="selectm">
+		<option></option>
+	</select>
+	<!-- <input type="submit" value="Uplaod" id="submitsvg"> -->
+	<!-- <img id="svguplaod">  -->
+
+
+	<!-- <form id="svgform" enctype="multipart/form-data"> -->
+
+	<!-- <input type="submit" value="Upload" id="submitsvg" /> -->
+	<input type="submit" value="Generate SVG" id="submitsvg">
+
+	<!-- <object id="svguplaod" type="image/svg+xml"></object>
+		 -->
+	<span id="svguplaod"></span>
+
+	<!-- </form> -->
+
+</body>
+
+</html>
